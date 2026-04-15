@@ -1,0 +1,47 @@
+:root {
+  --text: #465467;
+  --text-h: #102542;
+  --bg: #f4f8fc;
+  --border: #dde6f0;
+  --sans: "Avenir Next", "Segoe UI", sans-serif;
+
+  font: 16px/1.5 var(--sans);
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top, #ffffff 0%, #eef5fb 40%, #edf3f9 100%);
+}
+
+#root {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  min-height: 100svh;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+button,
+input,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
