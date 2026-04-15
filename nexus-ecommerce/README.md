@@ -156,7 +156,7 @@ A 2-minute demo video demonstrates:
 
 ## 🔗 Deliverables
 - GitHub Repository: (https://github.com/JosephDiSt/FinalProject/tree/main)
-- Live Deployment: (Add your link)
+- Live Deployment: (https://final-project-gules-gamma.vercel.app)
 - Demo Video: (Add your link)
 
 ---
