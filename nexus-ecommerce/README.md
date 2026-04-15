@@ -155,7 +155,7 @@ A 2-minute demo video demonstrates:
 ---
 
 ## 🔗 Deliverables
-- GitHub Repository: (Add your link)
+- GitHub Repository: (https://github.com/JosephDiSt/FinalProject/tree/main)
 - Live Deployment: (Add your link)
 - Demo Video: (Add your link)
 
