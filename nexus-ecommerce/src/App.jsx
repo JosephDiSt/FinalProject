@@ -8,17 +8,53 @@ import FavoritesList from "./components/FavoritesList";
 import CartList from "./components/CartList";
 
 function App() {
-  const [products, setProducts] = useState(productsData);
-  const [cart, setCart] = useState([]);
+  const [products, setProducts] = useState(() =>
+    JSON.parse(localStorage.getItem("products")) || productsData
+  );
+  const [cart, setCart] = useState(() =>
+    JSON.parse(localStorage.getItem("cart")) || []
+  );
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [categoryFilter, setCategoryFilter] = useState("All");
-  const [sortOrder, setSortOrder] = useState("");
-  const [discount, setDiscount] = useState(0);
-  const [promoInput, setPromoInput] = useState("");
+  const [categoryFilter, setCategoryFilter] = useState(
+    () => localStorage.getItem("categoryFilter") || "All"
+  );
+  const [sortOrder, setSortOrder] = useState(
+    () => localStorage.getItem("sortOrder") || ""
+  );
+  const [discount, setDiscount] = useState(
+    () => Number(localStorage.getItem("discount")) || 0
+  );
+  const [promoInput, setPromoInput] = useState(
+    () => localStorage.getItem("promoInput") || ""
+  );
   const [message, setMessage] = useState("");
-  const [wishlist, setWishlist] = useState(
+  const [wishlist, setWishlist] = useState(() =>
     JSON.parse(localStorage.getItem("wishlist")) || []
   );
+
+  useEffect(() => {
+    localStorage.setItem("products", JSON.stringify(products));
+  }, [products]);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
+  useEffect(() => {
+    localStorage.setItem("categoryFilter", categoryFilter);
+  }, [categoryFilter]);
+
+  useEffect(() => {
+    localStorage.setItem("sortOrder", sortOrder);
+  }, [sortOrder]);
+
+  useEffect(() => {
+    localStorage.setItem("discount", String(discount));
+  }, [discount]);
+
+  useEffect(() => {
+    localStorage.setItem("promoInput", promoInput);
+  }, [promoInput]);
 
   useEffect(() => {
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
